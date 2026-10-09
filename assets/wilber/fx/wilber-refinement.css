@@ -1,0 +1,64 @@
+/* Refinamiento acotado: conserva los tokens y las fuentes locales. */
+#row-14054d42 { align-items: center !important; }
+#text-e686023b { max-width: 580px; text-wrap: pretty; }
+#text-4ba6914d { text-wrap: pretty; }
+.wfx-language { position: fixed; top: 18px; left: 50%; transform: translateX(-50%); z-index: 2147482999; display: flex; padding: 4px; border: 1px solid var(--wfx-border); border-radius: 99px; background: var(--wfx-bg); color: var(--wfx-fg); box-shadow: 0 6px 24px oklch(0 0 0 / .18); }
+.wfx-language button { min-width: 44px; min-height: 44px; border: 0; border-radius: 99px; background: transparent; color: var(--wfx-fg); font: 12px var(--wfx-mono); cursor: pointer; }
+.wfx-language button:hover { background: var(--wfx-surface-2); }
+.wfx-language button[aria-pressed="true"] { background: var(--wfx-fg); color: var(--wfx-bg); }
+.wfx-language button[aria-pressed="true"]:hover { background: var(--wfx-fg); color: var(--wfx-bg); box-shadow: inset 0 0 0 2px var(--wfx-border); }
+.wfx-language button:focus-visible, .wfx-stack-card:focus-visible { outline: 2px solid var(--wfx-fg); outline-offset: 4px; }
+.wfx-stack { background: var(--wfx-bg); color: var(--wfx-fg); padding: clamp(56px, 8vw, 112px) clamp(20px, 5vw, 80px); font-family: var(--wfx-body); box-sizing: border-box; }
+.wfx-stack * { box-sizing: border-box; }
+.wfx-stack h2 { font: clamp(40px, 6vw, 80px)/1 var(--wfx-display); margin: 16px 0 20px; text-wrap: balance; }
+.wfx-stack-intro { max-width: 600px; color: var(--wfx-muted); line-height: 1.6; margin-bottom: 36px; }
+.wfx-stack-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 14px; }
+.wfx-stack-card { min-height: 160px; padding: 24px; border: 1px solid var(--wfx-border); border-radius: 16px; background: var(--wfx-surface); display: flex; flex-direction: column; align-items: flex-start; text-decoration: none; color: var(--wfx-fg); transition: transform .3s var(--wfx-ease), background .3s, border-color .3s; backdrop-filter: blur(16px); }
+.wfx-stack-card img { width: 34px; height: 34px; object-fit: contain; margin-bottom: 24px; filter: brightness(0) invert(1); }
+.wfx-stack-card strong { font-size: 18px; font-weight: 500; }
+.wfx-stack-card span { margin-top: 8px; color: var(--wfx-muted); font-size: 13px; line-height: 1.5; }
+.wfx-stack-card:hover, .wfx-stack-card:focus-visible { transform: translateY(-5px); background: var(--wfx-surface-2); border-color: var(--wfx-muted); }
+.wfx-stack-card:hover span, .wfx-stack-card:focus-visible span { color: var(--wfx-fg); }
+.wfx-stack-grid:has(.wfx-stack-card:hover) .wfx-stack-card:not(:hover) img { filter: brightness(0) invert(1) blur(1px); }
+@media(max-width:800px) {
+ .wfx-language { top: auto; bottom: 18px; left: auto; right: 18px; transform: none; }
+ .wfx-stack-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+ .wfx-stack-card { min-height: 154px; padding: 20px; }
+ #row-14054d42 { gap: 24px; }
+}
+@media(prefers-reduced-motion:reduce) {
+ .wfx-stack-card { transition: none; }
+ .wfx-stack-card:hover, .wfx-stack-card:focus-visible { transform: none; }
+}
+@media(max-width:800px) {
+ /* controles flotantes compactos en una sola esquina; se ocultan mientras haces scroll */
+ #wilber-music-control { right: 12px !important; bottom: 12px !important; transition: opacity .35s, transform .35s var(--wfx-ease); }
+ #wilber-music-button { padding: 0 !important; width: 48px !important; height: 48px !important; min-width: 0 !important; justify-content: center !important; gap: 0 !important; border-radius: 50% !important; }
+ #wilber-music-button .wilber-music-info, #wilber-music-button .wilber-music-bars { display: none !important; }
+ .wfx-language { bottom: 14px; right: 68px; padding: 2px; transition: opacity .35s, transform .35s var(--wfx-ease); }
+ .wfx-language button { min-width: 44px; min-height: 44px; font-size: 11px; }
+ html.wfx-scrolling .wfx-language, html.wfx-scrolling #wilber-music-control { opacity: 0; transform: translateY(14px); pointer-events: none; }
+ /* visión móvil: retrato limpio + etiquetas legibles en HTML */
+ .wfx-vision-host > img, .wfx-vision-host > picture { display: none !important; }
+ .wfx-vision-m { display: block; position: relative; padding: 8px 0 4px; }
+ .wfx-vision-m figure { margin: 0; position: relative; }
+ .wfx-vision-m figure img { display: block; width: 100%; height: auto; -webkit-mask-image: linear-gradient(to bottom, #000 78%, transparent); mask-image: linear-gradient(to bottom, #000 78%, transparent); }
+ .wfx-vision-m .wfx-vm-years { position: absolute; right: 0; bottom: 12%; background: var(--wfx-bg); color: var(--wfx-fg); border-radius: 12px; padding: 12px 14px; font-family: var(--wfx-body); box-shadow: 0 18px 40px -14px rgb(0 0 0 / .55); }
+ .wfx-vm-years strong { display: block; font: 22px/1 var(--wfx-giant); color: var(--wfx-red-glow); letter-spacing: .02em; }
+ .wfx-vm-years span { display: block; font-size: 11px; color: var(--wfx-muted); margin-top: 4px; }
+ .wfx-vm-years b { display: block; font: 12px var(--wfx-mono); letter-spacing: .1em; margin-top: 10px; font-weight: 400; }
+ .wfx-vm-tags { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 14px 0 0; padding: 0; list-style: none; }
+ .wfx-vm-tags li { border: 1px solid oklch(0.2 0.006 40 / .18); border-radius: 12px; padding: 12px; font: 11px/1.35 var(--wfx-mono); letter-spacing: .06em; text-transform: uppercase; color: oklch(0.2 0.006 40); background: oklch(1 0 0 / .7); }
+ .wfx-vm-tags li i { display: block; width: 6px; height: 6px; border-radius: 50%; background: var(--wfx-red-hot); margin-bottom: 8px; }
+}
+@media(min-width:801px) { .wfx-vision-m { display: none; } }
+@media(min-width:801px) {
+ #row-ca3b1d24 { display: none !important; }
+}
+
+/* tablet / escritorio estrecho: el retrato «visión» cabe en su columna sin tapar el texto */
+@media (min-width: 801px) and (max-width: 1365px) {
+ .wfx-vision-frame { width: 124% !important; margin-left: -12% !important; }
+ .wfx-vision-frame > div, .wfx-vision-frame picture { width: 100% !important; height: auto !important; min-height: 0 !important; padding: 0 !important; }
+ .wfx-vision-frame img { width: 100% !important; height: auto !important; display: block; }
+}
